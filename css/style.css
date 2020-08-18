@@ -16,7 +16,8 @@ main {
   background-color: #FFF;
   border-radius: 20px;
   margin: 35px auto;
-  padding: 50px;
+  max-width: 1500px;
+  padding: 30px;
   width: 80%;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.144);
 }
@@ -34,14 +35,10 @@ h1 {
   margin: 20px auto;
   resize: none;
   width: 100%;
+  max-width: 460px;
   padding: 10px;
   font-size: 20px;
   height: 200px;
-}
-
-.controls {
-  margin: 0 auto;
-  width: 50%;
 }
 
 .controls input {
@@ -51,8 +48,9 @@ h1 {
   font-size: 25px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  display: inline-block;
+  display: block;
   outline: none;
+  margin: 10px auto;
 }
 .keyInput {
   border: 1px solid #C0C0C0;
@@ -78,3 +76,15 @@ h1 {
   top: 2px
 }
 
+@media (min-width: 640px) {
+  .controls {
+    margin: 0 auto;
+    width: 460px;
+  }
+  .controls input {
+    display: inline-block;
+  }
+  .controls .encrypt {
+    margin: 0 5px;
+  }
+}
