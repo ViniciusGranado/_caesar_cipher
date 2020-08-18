@@ -22,12 +22,18 @@ main {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.144);
 }
 
-h1 {
+h1, h2 {
   text-align: center;
-  font-size: 36px;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.2;
 }
+h1, h2, p {
+  font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+  font-size: 36px;
+}
+
 /* Encrypter area */
 
 .encrypterArea textarea {
@@ -55,6 +61,7 @@ h1 {
 .keyInput {
   border: 1px solid #C0C0C0;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  position: relative;
 }
 .button {
   box-shadow: 2px 2px 2px #33d9b250;
@@ -76,6 +83,22 @@ h1 {
   top: 2px
 }
 
+/* About area */
+.aboutArea {
+  /* background-color: pink; */
+  max-width: 460px;
+  margin: 40px auto 0;
+}
+.aboutArea h2 {
+  font-size: 32px;
+}
+.aboutArea p {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.5;
+  text-indent: 20px;
+  /* text-align: justify; */
+}
 @media (min-width: 640px) {
   .controls {
     margin: 0 auto;
