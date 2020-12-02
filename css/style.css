@@ -1,3 +1,5 @@
+/* MOBILE FIRST */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
 /* Font reference: 
    font-family: 'Ubuntu', sans-serif;
@@ -9,7 +11,7 @@
 }
 
 body {
-  background-color: #34ACE0;
+  background-color: #0F0E0E;
 }
 
 b {
@@ -19,101 +21,112 @@ b {
 main {
   background-color: #FFF;
   border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.144);
   margin: 35px auto;
   max-width: 1500px;
   padding: 30px;
   width: 80%;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.144);
 }
 
 h1, h2 {
-  text-align: center;
+  color: #0F0E0E;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.2;
+  text-align: center;
 }
-h1, h2, p {
+p {
   font-family: 'Ubuntu', sans-serif;
 }
+
 h1 {
-  font-size: 36px;
+  font-size: 3rem;
 }
 
-/* Encrypter area */
-
-.encrypterArea textarea {
+/* ENCRYPTER AREA */
+.encrypter-area textarea {
   display: block;
-  margin: 20px auto;
-  resize: none;
-  width: 100%;
-  max-width: 460px;
-  padding: 10px;
   font-size: 20px;
   height: 200px;
-  position: relative;
+  margin: 20px auto;
+  max-width: 460px;
+  outline: none;
+  padding: 10px;
+  position: relative; /* To animate element */
+  resize: none;
+  transition: left 50ms linear;
+  width: 100%;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .controls input {
-  width: 150px;
-  height: 40px;
   border-radius: 10px;
-  font-size: 25px;
+  color: #0F0E0E;
+  flex: 1;
   font-family: 'Roboto', sans-serif;
-  text-align: center;
-  display: block;
+  font-size: 25px;
+  height: 40px;
+  margin: 5px 0;
   outline: none;
-  margin: 10px auto;
+  text-align: center;
+  width: 150px;
 }
-.keyInput {
+
+.key-input {
   border: 1px solid #C0C0C0;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
-  left: 0px;
-  position: relative;
-  transition: all 50ms linear;
+  position: relative; /* To animate element */
+  transition: left 50ms linear;
 }
+
 .button {
-  box-shadow: 2px 2px 2px #33d9b250;
   background-color: #FFF;
-  border: 2px solid #33D9B2;
-  color: #000;
+  border: 2px solid #B3BFB8;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px #B3BFB850;
+  color: #0F0E0E;
   transition: background-color 0.4s;
-  position: relative
+  position: relative; /* To animate element */
 }
 
 .controls .button:hover{
-  background-color: #33D9B2;
+  background-color: #B3BFB8;
 }
 .controls .button:active{
-  box-shadow: none;
-  box-shadow: inset 1px 1px 5px #2dc29f;
-  top: 2px
+  box-shadow: inset 1px 1px 5px #99a39d;
+  top: 2px;
 }
 
-/* About area */
-.aboutArea {
-  /* background-color: pink; */
-  max-width: 460px;
+/* ABOUT AREA */
+.about-area {
   margin: 40px auto 0;
+  max-width: 460px;
 }
-.aboutArea h2 {
-  font-size: 32px;
+.about-area h2 {
+  color: #0F0E0E;
+  font-size: 2rem;
 }
-.aboutArea p {
+.about-area p {
+  color: #0F0E0E;
   font-size: 20px;
-  margin: 20px 0;
   line-height: 1.5;
+  margin: 20px 0;
   text-indent: 20px;
-  /* text-align: justify; */
 }
+
+/* MEDIA-QUERIES */
 @media (min-width: 640px) {
   .controls {
+    flex-direction: row;
     margin: 0 auto;
     width: 460px;
   }
-  .controls input {
-    display: inline-block;
-  }
-  .controls .encrypt {
-    margin: 0 5px;
+
+  .controls .encrypt-btn {
+    margin: 0 10px;
   }
 }

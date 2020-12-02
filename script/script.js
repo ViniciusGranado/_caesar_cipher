@@ -1,9 +1,9 @@
 /* eslint-disable semi */
 
-const textField = document.querySelector('textarea.textarea')
-const keyInput = document.querySelector('input.keyInput');
-const encryptButton = document.querySelector('input.encrypt');
-const decryptButton = document.querySelector('input.decrypt');
+const textField = document.querySelector('.textarea')
+const keyInput = document.querySelector('.key-input');
+const encryptButton = document.querySelector('.encrypt-btn');
+const decryptButton = document.querySelector('.decrypt-btn');
 
 encryptButton.addEventListener('click', () => manageText('encrypt'));
 decryptButton.addEventListener('click', () => manageText('decrypt'));
@@ -13,7 +13,7 @@ function manageText (typeOfAction) {
 
   if (userText === '') {
     textField.style.borderColor = 'red';
-    animateHtmlObject(textField);
+    animateError(textField);
   } else {
     textField.style.borderColor = '#C0C0C0';
 
@@ -26,12 +26,12 @@ function manageText (typeOfAction) {
         option: typeOfAction
       };
 
-      textData.newSentence = encryptDecryptText(textData);
+      const finalSentence = encryptDecryptText(textData);
 
-      textField.value = textData.newSentence;
+      textField.value = finalSentence;
     } else {
       keyInput.style.borderColor = 'red';
-      animateHtmlObject(keyInput);
+      animateError(keyInput);
     };
   };
 }
@@ -44,7 +44,7 @@ function validateKeyValue (keyValue) {
   return true;
 }
 
-function animateHtmlObject (htmlObject) {
+function animateError (htmlObject) {
   let counter = 0;
 
   const animation = setInterval(() => {
