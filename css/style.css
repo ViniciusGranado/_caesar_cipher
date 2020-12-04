@@ -1,60 +1,61 @@
 /* MOBILE FIRST */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
-/* Font reference: 
-   font-family: 'Ubuntu', sans-serif;
-   font-family: 'Roboto', sans-serif;
-*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;700&display=swap');
+/* font-family: 'Bungee', cursive; */
+/* font-family: 'Montserrat', sans-serif; */
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #0F0E0E;
+  background-color: #ff4242;
+  padding: 30px 0;
 }
 
 b {
   font-weight: 900;
 }
 
-main {
-  background-color: #FFF;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.144);
-  margin: 35px auto;
-  max-width: 1500px;
-  padding: 30px;
-  width: 80%;
-}
 
 h1, h2 {
-  color: #0F0E0E;
-  font-family: 'Ubuntu', sans-serif;
+  color: #F3F3F4;
+  font-family: 'Bungee', cursive;
   line-height: 1.2;
   text-align: center;
-}
-p {
-  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
   font-size: 3rem;
 }
 
+.main-container {
+  padding: 0 30px;
+}
+
 /* ENCRYPTER AREA */
 .encrypter-area textarea {
+  background-color: #0F0E0E;
+  border: 2px solid #F3F3F4;
+  box-sizing: border-box;
+  color: #F3F3F4;
   display: block;
-  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
   height: 200px;
   margin: 20px auto;
   max-width: 460px;
   outline: none;
   padding: 10px;
-  position: relative; /* To animate element */
   resize: none;
-  transition: left 50ms linear;
   width: 100%;
+
+  /* error animation properties */
+  transition: left 50ms linear;
+  position: relative;
+}
+textarea::placeholder {
+  color: inherit;
 }
 
 .controls {
@@ -64,11 +65,15 @@ h1 {
 }
 
 .controls input {
+  background-color: #0F0E0E;
+  border: 2px solid #F3F3F4;
   border-radius: 10px;
-  color: #0F0E0E;
+  box-shadow: 2px 2px 2px rgba(15, 15, 14, 0.314);
+  box-sizing: border-box;
+  color: #F3F3F4;
   flex: 1;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5625rem;
   height: 40px;
   margin: 5px 0;
   outline: none;
@@ -77,24 +82,28 @@ h1 {
 }
 
 .key-input {
-  border: 1px solid #C0C0C0;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
-  position: relative; /* To animate element */
+  text-transform: uppercase;
+
+  /* error animation properties */
+  position: relative;
   transition: left 50ms linear;
+}
+.key-input::placeholder {
+  color: inherit;
 }
 
 .button {
-  background-color: #FFF;
-  border: 2px solid #B3BFB8;
+  background-color: #F3F3F4;
+  border: 2px solid #0F0E0E;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px #B3BFB850;
   color: #0F0E0E;
-  transition: background-color 0.4s;
   position: relative; /* To animate element */
+  transition: background-color 0.4s;
 }
 
 .controls .button:hover{
-  background-color: #B3BFB8;
+  background-color: #F3F3F4;
+  color: #0F0E0E;
 }
 .controls .button:active{
   box-shadow: inset 1px 1px 5px #99a39d;
@@ -106,16 +115,18 @@ h1 {
   margin: 40px auto 0;
   max-width: 460px;
 }
+
 .about-area h2 {
-  color: #0F0E0E;
   font-size: 2rem;
 }
+
 .about-area p {
-  color: #0F0E0E;
+  color: #F3F3F4;
   font-size: 20px;
   line-height: 1.5;
   margin: 20px 0;
   text-indent: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* MEDIA-QUERIES */

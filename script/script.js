@@ -7,18 +7,25 @@ const decryptButton = document.querySelector('.decrypt-btn');
 
 encryptButton.addEventListener('click', () => manageText('encrypt'));
 decryptButton.addEventListener('click', () => manageText('decrypt'));
+textField.addEventListener('click', () => {
+  textField.style.color = '#F3F3F4';
+})
+keyInput.addEventListener('click', () => {
+  keyInput.style.color = '#F3F3F4';
+})
+
 
 function manageText (typeOfAction) {
   const userText = textField.value.trim();
 
   if (userText === '') {
-    textField.style.borderColor = 'red';
+    textField.style.color = '#FF4242';
     animateError(textField);
   } else {
-    textField.style.borderColor = '#C0C0C0';
+    textField.style.color = '#F3F3F4';
 
     if (validateKeyValue(keyInput.value)) {
-      keyInput.style.borderColor = '#C0C0C0';
+      keyInput.style.color = '#F3F3F4';
 
       const textData = {
         originalSentence: userText,
@@ -30,7 +37,7 @@ function manageText (typeOfAction) {
 
       textField.value = finalSentence;
     } else {
-      keyInput.style.borderColor = 'red';
+      keyInput.style.color = '#FF4242';
       animateError(keyInput);
     };
   };
